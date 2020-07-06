@@ -273,10 +273,20 @@ This one is created by me. **Requires PCL library to run**.
 
 First you need to have the camera's image published on topic ```camera/image_raw```. 
 
-Change the vocabulary and camera settings file accordingly. The directory is set in the launch file, located at ```ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch```
+Change the vocabulary and camera settings file in the launch file accordingly. The directory is set in the launch file, located at ```ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch```
 
-Then launch:
+**Default location:**
+- Vocab file: `ORB_SLAM2_CUDA/Vocabulary/ORBvoc.txt`
+- Camera settings: `ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/conf/IDScam.yaml`
 
+> **Note:** `KEYFRAME_TRAJECTORY_TUM_SAVE_FILE_DIR` is the path where the keypoint trajectories are saved (found in `ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/lib/SlamData.h`), update the path accordingly and recompile the ROS section.
+> ```
+> $ roscd ORB_SLAM2_CUDA/build
+> $ make -j4
+> ```
+
+
+To launch:
 ```
 roslaunch /path/to/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.launch
 ```
@@ -287,7 +297,7 @@ This will run the ROS publisher node. The ROS topics will now be published in th
 rosrun rviz rviz
 ```
 
-Note that Viewer is disable by default.
+> Note that Viewer is disable by default.
 
 ## Full usage:
 
