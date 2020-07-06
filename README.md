@@ -308,11 +308,11 @@ roslaunch /path/to/ORB_SLAM2_CUDA/Examples/ROS/ORB_SLAM2_CUDA/launch/ros_mono.la
 ### This is a work in progress. So expects new things and bugs fixes in future version. Happy coding.
 
 ## References and Useful links for troubleshooting
-https://devtalk.nvidia.com/default/topic/1001801/orb_slam2-cuda-enhanced-running-on-a-tx2/#
-https://github.com/raulmur/ORB_SLAM2/issues/202
-https://github.com/raulmur/ORB_SLAM2/issues/205
-https://github.com/raulmur/ORB_SLAM2/issues/209
-https://github.com/raulmur/ORB_SLAM2/pull/144
-https://github.com/raulmur/ORB_SLAM2/issues/317
+- https://devtalk.nvidia.com/default/topic/1001801/orb_slam2-cuda-enhanced-running-on-a-tx2/#
+- https://github.com/raulmur/ORB_SLAM2/issues/202
+- https://github.com/raulmur/ORB_SLAM2/issues/205
+- https://github.com/raulmur/ORB_SLAM2/issues/209
+- https://github.com/raulmur/ORB_SLAM2/pull/144
+- https://github.com/raulmur/ORB_SLAM2/issues/317
 
 
