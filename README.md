@@ -189,9 +189,10 @@ $ make install -j4
 
 
 #### PCL for ROS
-```
-sudo apt-get install libopenni2-dev
-sudo apt-get install python-vtk
+```bash
+$ sudo apt-get install libopenni2-dev
+$ sudo apt-get install python-vtk
+$ sudo apt-get install ros-melodic-pcl-ros
 ```
 
 # Building ORB_SLAM2_CUDA
@@ -233,7 +234,6 @@ When the build is completed, you can try the examples as in the ORB-SLAM2 repo's
   - PCL for ROS:
     ```
     sudo apt-get install libopenni2-dev
-    sudo apt-get install ros-melodic-pcl-ros
     sudo apt-get install ros-melodic-pcl-ros
     ```
 - Clone the `jetson_nano` branch of the code (with modified `CMakeLists` for OpenCV 4.1.0 and fixed [some compatability issues](https://github.com/raulmur/ORB_SLAM2/issues/451)):
