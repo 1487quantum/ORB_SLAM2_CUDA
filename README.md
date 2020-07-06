@@ -1,7 +1,5 @@
 # ORB_SLAM2_CUDA
 
-<a href="LICENSE" ><img src="https://img.shields.io/github/license/1487quantum/ORB_SLAM2_CUDA?style=for-the-badge"/></a>
-
 Modified version of ORB-SLAM2 with GPU enhancement and several ROS topics for **NVIDIA Jetson TX1, TX2, Xavier, Nano**. 
 Currently only supports Monocular camera. Run in real time.
 
