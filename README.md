@@ -1,4 +1,7 @@
 # ORB_SLAM2_CUDA
+
+<a href="LICENSE" ><img src="https://img.shields.io/github/license/1487quantum/ORB_SLAM2_CUDA?style=for-the-badge"/></a>
+
 Modified version of ORB-SLAM2 with GPU enhancement and several ROS topics for **NVIDIA Jetson TX1, TX2, Xavier, Nano**. 
 Currently only supports Monocular camera. Run in real time.
 
@@ -136,16 +139,56 @@ sudo make instal
 
 ### Install dependancies for ORB-SLAM2
 #### Pangolin
-Dowload and install instructions can be found at: https://github.com/stevenlovegrove/Pangolin.
+
+To visualise the keypoints and SLAM.
+
+> More information can be found at: https://github.com/stevenlovegrove/Pangolin.
+
+**Dependencies**
+```bash
+$ sudo apt install -y libglew-dev
+```
+
+**Download & install**
+```bash
+$ git clone https://github.com/stevenlovegrove/Pangolin.git
+$ cd Pangolin
+$ mkdir build && cd build
+$ cmake \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    ..
+$ make install -j4
+```
 
 #### BLAS and LAPACK
 ```
-sudo apt-get install libblas-dev
-sudo apt-get install liblapack-dev
+$ sudo apt-get install libblas-dev
+$ sudo apt-get install liblapack-dev
 ```
 
 #### Eigen3
-Download and install instructions can be found at: http://eigen.tuxfamily.org. Required at least 3.1.0.
+
+> More information can be found at: http://eigen.tuxfamily.org. Required at least **v3.1.0**.
+
+**Dependencies**
+```bash
+$ sudo apt install -y gfortran
+```
+
+**Download & install (v3.3.4)**
+```bash
+$ wget -q http://bitbucket.org/eigen/eigen/get/3.3.4.tar.bz2
+$ rm -rf 3.3.4.tar.bz2
+$ cd eigen-eigen-5a0156e40feb
+$ mkdir build && cd build
+$ cmake \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_PREFIX=/usr/local \
+    ..
+$ make install -j4
+```
+
 
 #### PCL for ROS
 ```
@@ -192,6 +235,7 @@ When the build is completed, you can try the examples as in the ORB-SLAM2 repo's
   - PCL for ROS:
     ```
     sudo apt-get install libopenni2-dev
+    sudo apt-get install ros-melodic-pcl-ros
     sudo apt-get install ros-melodic-pcl-ros
     ```
 - Clone the `jetson_nano` branch of the code (with modified `CMakeLists` for OpenCV 4.1.0 and fixed [some compatability issues](https://github.com/raulmur/ORB_SLAM2/issues/451)):
